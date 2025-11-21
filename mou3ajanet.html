@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>فرن الحسون — معجنات</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="logo">
+      <img src="pictures/photo_2025-11-19_19-47-52-removebg-preview.png" alt="Logo">
+      فرن <span>الحسون🔥</span>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main>
+    <section class="hero">
+      <div class="fire-glow"></div>
+      <div class="smoke"></div>
+      <h1 class="hero-title">أطيب معجنات !!</h1>
+    </section>
+
+    <!-- Mouajanet Section -->
+    <section class="menu">
+      <div class="menu-track">
+
+        <article class="card">
+          <img src="pictures/lahmee.png" alt="سفيحة بعلبكية">
+          <div class="card-body"><h3>سفيحة بعلبكية</h3></div>
+        </article>
+
+        <article class="card">
+          <img src="pictures/sware.png" alt="بيتزا سواريه">
+          <div class="card-body"><h3>بيتزا سواريه</h3></div>
+        </article>
+
+        <article class="card">
+          <img src="pictures/tripoli.png" alt="بيتزا طرابلسية">
+          <div class="card-body"><h3>بيتزا طرابلسية</h3></div>
+        </article>
+
+        <article class="card">
+          <img src="pictures/fatayer.png" alt="فطاير">
+          <div class="card-body"><h3>فطاير</h3></div>
+        </article>
+
+        <article class="card">
+          <img src="pictures/cheese_roll.png" alt="رول جبنة">
+          <div class="card-body"><h3>رول جبنة</h3></div>
+        </article>
+
+        <article class="card">
+          <img src="pictures/zaatar_roll.png" alt="رول زعتر">
+          <div class="card-body"><h3>رول زعتر</h3></div>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- WhatsApp Fixed Button -->
+  <a id="quickWhatsApp" class="fab-whatsapp" href="#" target="_blank" rel="noopener">
+    💬 WhatsApp
+  </a>
+
+  <!-- Quick Order Modal -->
+  <div id="orderModal" class="modal" aria-hidden="true">
+    <div class="modal-card">
+      <button id="closeOrder" class="modal-close">&times;</button>
+      <h2>طلب سريع</h2>
+      <form id="orderForm">
+        <label>الاسم:<input name="name" required /></label>
+        <label>رقم الهاتف:<input name="phone" inputmode="tel" required /></label>
+        <label>الموقع:<input name="location" /></label>
+        <label>الطلب:<textarea name="order" rows="3"></textarea></label>
+        <div class="actions">
+          <button type="submit" class="primary">إرسال</button>
+          <button type="button" id="cancelOrder">إلغاء</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
+
