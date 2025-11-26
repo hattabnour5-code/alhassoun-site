@@ -1,0 +1,256 @@
+:root{
+  --bg:#0b0b0c;
+  --card-bg: rgba(255,255,255,0.04);
+  --accent: #ff8a00;
+  --muted: #c9bdb0;
+  --radius:14px;
+}
+
+/* BASE */
+body {
+  margin:0;
+  min-height:100vh;
+  background:var(--bg);
+  color:#fff;
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+  text-align:center;
+  padding:18px;
+  padding-top: 100px; /* space for fixed header */
+}
+
+/* HEADER */
+.site-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--bg);
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.logo img {
+  height: 80px;
+}
+
+.logo-text {
+  font-weight: 900;
+  font-size: 30px;
+  color: rgb(255, 249, 242);
+}
+
+/* HOME PAGE GRID */
+.menu-sections{
+  display:grid;
+  gap:16px;
+  grid-template-columns:repeat(2,1fr);
+  margin-top:20px;
+}
+
+.section-card{
+  background:var(--card-bg);
+  border-radius:20px;
+  overflow:hidden;
+  cursor:pointer;
+  transition:transform 0.2s, box-shadow 0.2s;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  box-shadow:0 6px 12px rgba(0,0,0,0.12);
+}
+
+.section-card img{
+  width:100%;
+  height:auto;
+}
+
+.section-card:hover{
+  transform:scale(1.03);
+  box-shadow:0 8px 16px rgba(0,0,0,0.18);
+}
+
+.section-card h3{
+  margin-top:6px;
+  font-size:clamp(14px, 2.5vw, 22px);
+  text-align:center;
+  line-height:1.2;
+  color:#fff;
+}
+
+/* Large screens - 3 columns */
+@media(min-width:1024px){
+  .menu-sections{
+    grid-template-columns:repeat(3,1fr);
+  }
+}
+
+/* WhatsApp floating button */
+.fab-whatsapp{
+  position:fixed;
+  bottom:18px;
+  left:18px;
+  z-index: 1000;
+  background:#25D366;
+  color:#fff;
+  padding:14px 20px;
+  border-radius:50px;
+  font-weight:700;
+  font-size:16px;
+  text-decoration:none;
+  box-shadow:0 6px 18px rgba(0,0,0,0.3);
+}
+
+/* MODAL */
+.modal{
+  position:fixed;
+  inset:0;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  background:rgba(0,0,0,0.7);
+  padding:18px;
+  z-index:70;
+}
+.modal[aria-hidden="false"]{display:flex;}
+
+.modal-card{
+  width:100%;
+  max-width:420px;
+  background: rgba(255,255,255,0.05);
+  padding:16px;
+  border-radius:14px;
+  color:#fff;
+  position:relative;
+}
+
+.modal-close{
+  position:absolute;
+  left:12px;
+  top:10px;
+  background:none;
+  border:0;
+  color:#fff;
+  font-size:26px;
+  cursor:pointer;
+}
+
+input, textarea{
+  font-size:16px;
+  width:100%;
+  padding:10px;
+  border-radius:8px;
+  border:1px solid rgba(255,255,255,0.06);
+  background:var(--bg);
+  color:#fff;
+}
+
+label{
+  display:block;
+  text-align:right;
+  margin:8px 0;
+}
+
+.actions{
+  display:flex;
+  gap:10px;
+  justify-content:flex-end;
+  margin-top:10px;
+}
+
+.primary{
+  background:var(--accent);
+  color:#111;
+  border:0;
+  padding:10px 14px;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+/* ------------------------------ */
+/*     UNIFIED CARD DESIGN        */
+/*     FOR ALL MENU PAGES         */
+/* ------------------------------ */
+
+.menu-track {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 15px;
+  padding: 10px;
+}
+
+/* Large screens: 3 cards */
+@media (min-width: 700px) {
+  .menu-track {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Card Design (same as Home Page) */
+.menu .card {
+  background:var(--bg);
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 6px 12px rgba(0,0,0,0.12);
+  text-align:center;
+  padding-bottom:10px;
+  transition:transform 0.2s, box-shadow 0.2s;
+}
+
+.menu .card img {
+  width: 100%;
+  height: auto;
+}
+
+.menu .card:hover {
+  transform:scale(1.03);
+  box-shadow:0 8px 16px rgba(0,0,0,0.18);
+}
+
+.menu .card h3 {
+  margin:10px 0 4px;
+  font-size:20px;
+  color:#fff;
+}
+
+.menu .card p {
+  margin:5px 0;
+  color:#fff;
+  font-size:16px;
+}
+
+/* زر الاضافة – نفس تصميم المناقيش */
+.add-to-cart,
+.zaatar-btn,
+.size-btn {
+  background: #25D366;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: bold;
+  width: 75%;
+  margin-top: 5px;
+  transition: 0.2s;
+}
+
+.add-to-cart:hover,
+.zaatar-btn:hover,
+.size-btn:hover {
+  transform: scale(1.03);
+  background: #1ebe5b;
+}
+#quickWhatsApp {
+  display: none !important;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>فرن الحسون — مناقيش</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="logo">
+      <img src="pictures/logo.png" alt="Logo">
+      <span class="logo-text">فرن الحسون🔥</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1 class="hero-title" style="color:  rgb(255, 249, 242);">للدايت !!</h1>
+    </section>
+
+    <!-- Manakeesh Menu -->
+    <section class="menu">
+      <div class="menu-track">
+        <article class="card" data-name="cheese_shoufen" data-price="150">
+          <img src="pictures/cheese_shoufen.png" alt="cheese_shoufen">
+          <div class="card-body">
+            <h3>جبنة</h3>
+            <p>السعر: 170 ل.ل</p>
+            <button class="add-to-cart"><b>اضافة</b> </button>
+          </div>
+        </article>
+
+        <article class="card" data-base-price="0">
+          <img src="pictures/zaatar_shoufen.png" alt="زعتر">
+          <div class="card-body">
+            <h3>زعتر</h3>
+            <p>الأنواع:</p>
+            <div class="zaatar-options">
+              <button class="zaatar-btn" data-name="زعتر عادي" data-price="60"><b>زعتر عادي - 60 ل.ل</b></button><br>
+              <button class="zaatar-btn" data-name="زعتر بلدي" data-price="90"><b>زعتر بلدي - 90 ل.ل</b></button><br>
+            </div>
+            <label>
+              <input type="checkbox" class="extraGreens"> <b> مع خضرة (+50 ل.ل)</b>
+            </label>
+          </div>
+        </article>
+
+        
+      </div>
+    </section>
+  </main>
+
+
+  <!-- باقي محتوى الصفحة هنا -->
+
+<!-- زر WhatsApp والمودال -->
+<a id="quickWhatsApp" class="fab-whatsapp" href="#">💬 WhatsApp</a>
+
+<!-- زر WhatsApp والمودال -->
+<a id="quickWhatsApp" class="fab-whatsapp" href="#">💬 WhatsApp</a>
+
+<div id="orderModal" class="modal" aria-hidden="true">
+  <div class="modal-card">
+    <button id="closeOrder" class="modal-close">&times;</button>
+    <h2>طلب سريع</h2>
+    <form id="orderForm">
+      <label>الاسم:<input name="name" required /></label>
+      <label>رقم الهاتف: <input name="phone" inputmode="tel" required /></label>
+      <label>الموقع:<input name="location" /></label>
+
+      <label>الطلب:</label>
+      <ul id="orderList"></ul>
+
+      <label>ملاحظة:<textarea name="note" rows="2" placeholder="اختياري"></textarea></label>
+      <div class="actions">
+        <button type="submit" class="primary">إرسال</button>
+        <button type="button" id="cancelOrder">إلغاء</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+<script src="order.js"></script>
+
+</body>
+</html>

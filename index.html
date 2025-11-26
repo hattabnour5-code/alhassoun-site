@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>فرن الحسون</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">
+      <img src="pictures/logo.png" alt="Logo">
+      <span class="logo-text">فرن الحسون🔥</span>
+    </div>
+  </header>
+
+  <section class="hero">
+      <h1 class="hero-title" style="color:  rgb(255, 249, 242);">أطيب لقمة!!</h1>
+    </section>
+  <main>
+    <section class="menu-sections">
+      <div class="section-card" onclick="window.location.href='manakeesh.html'" data-section-page="true">
+        <img src="pictures/manakeesh.png" alt="مناقيش">
+        <h3>مناقيش</h3>
+      </div>
+
+      <div class="section-card" onclick="window.location.href='pizza.html'" data-section-page="true">
+        <img src="pictures/pizza.png" alt="بيتزا">
+        <h3>بيتزا</h3>
+      </div>
+
+      <div class="section-card" onclick="window.location.href='mou3ajanet.html'" data-section-page="true">
+        <img src="pictures/mouajanat.png" alt="معجنات">
+        <h3>معجنات</h3>
+      </div>
+
+      <div class="section-card" onclick="window.location.href='shoufen.html'" data-section-page="true">
+        <img src="pictures/shofan.png" alt="شوفان">
+        <h3>شوفان</h3>
+      </div>
+
+      <div class="section-card" onclick="window.location.href='kaak.html'" data-section-page="true">
+        <img src="pictures/kaak.png" alt="كعك">
+        <h3>كعك</h3>
+      </div>
+
+      <div class="section-card" onclick="window.location.href='drinks.html'" data-section-page="true">
+        <img src="pictures/drinks.png" alt="مشروبات">
+        <h3>مشروبات</h3>
+      </div>
+    </section>
+  </main>
+
+<a id="quickWhatsApp" class="fab-whatsapp" href="#">💬 WhatsApp</a>
+
+
+<!-- زر WhatsApp والمودال -->
+<a id="quickWhatsApp" class="fab-whatsapp" href="#">💬 WhatsApp</a>
+
+<div id="orderModal" class="modal" aria-hidden="true">
+  <div class="modal-card">
+    <button id="closeOrder" class="modal-close">&times;</button>
+    <h2>طلب سريع</h2>
+    <form id="orderForm">
+      <label>الاسم:<input name="name" required /></label>
+      <label>رقم الهاتف: <input name="phone" inputmode="tel" required /></label>
+      <label>الموقع:<input name="location" /></label>
+
+      <label>الطلب:</label>
+      <ul id="orderList"></ul>
+
+      <label>ملاحظة:<textarea name="note" rows="2" placeholder="اختياري"></textarea></label>
+      <div class="actions">
+        <button type="submit" class="primary">إرسال</button>
+        <button type="button" id="cancelOrder">إلغاء</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+<script src="order.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
