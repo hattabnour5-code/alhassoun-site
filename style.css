@@ -113,7 +113,7 @@ body {
 .modal {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.6);
+  background: var(--bg);
   display: none !important;  
   justify-content: center;
   align-items: center;
@@ -248,6 +248,7 @@ label{
 #quickWhatsApp {
   display: none !important;
 }
+
 
 
 
