@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const WA_NO = "96171146312";
+  const WA_NO = "96181268088";
   const quickWhatsApp = document.getElementById('quickWhatsApp');
   const orderModal = document.getElementById('orderModal');
   const closeOrder = document.getElementById('closeOrder');
@@ -106,6 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // تحميل أي طلبات سابقة عند فتح الصفحة
   renderCart();
 });
+
 
 
 
