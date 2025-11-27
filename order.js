@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const cancelOrder = document.getElementById('cancelOrder');
   const orderForm = document.getElementById('orderForm');
 
-  // قائمة الطلبات العمومية لكل الصفحات
+  // قائمة الطلبات العامة لكل الصفحات
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
   let orderList = document.getElementById('orderList');
@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function saveCart(){ localStorage.setItem('cart', JSON.stringify(cart)); }
 
+  // فتح المودال عند الضغط على WhatsApp
   quickWhatsApp.addEventListener('click', () => {
     orderModal.setAttribute('aria-hidden', 'false');
     renderCart();
@@ -26,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
   closeOrder.addEventListener('click', () => orderModal.setAttribute('aria-hidden', 'true'));
   cancelOrder.addEventListener('click', () => orderModal.setAttribute('aria-hidden', 'true'));
 
+  // إضافة العناصر عند الضغط على زر Add
   document.querySelectorAll('.add-to-cart').forEach(btn => {
     btn.addEventListener('click', (e) => {
       const card = e.target.closest('.card');
@@ -33,11 +35,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // زر الزعتر/الإضافات
   document.querySelectorAll('.zaatar-btn, .size-btn').forEach(btn => {
     btn.addEventListener('click', (e) => {
       const card = e.target.closest('.card');
       const name = btn.getAttribute('data-name') || card.querySelector('h3').textContent;
-      const price = btn.getAttribute('data-price') || '0';
+      const price = parseInt(btn.getAttribute('data-price') || '0');
       cart.push({ item: name, price: price, qty: 1 });
       saveCart();
       renderCart();
@@ -49,13 +52,18 @@ document.addEventListener('DOMContentLoaded', () => {
     let name = card.querySelector('h3').textContent;
     let priceText = card.querySelector('p')?.textContent || '';
     let priceMatch = priceText.match(/(\d+)/);
-    let price = priceMatch ? priceMatch[1] : '0';
+    let price = priceMatch ? parseInt(priceMatch[1]) : 0;
 
-    const extra = card.querySelector('.extraGreens');
-    if(extra && extra.checked){
-      price = parseInt(price) + 50;
-      name += ' مع خضرة';
-    }
+    // كل الـ checkbox داخل الكارد (إضافات)
+    const extras = card.querySelectorAll('.extraGreens, .extra-option');
+    extras.forEach(extra => {
+      if(extra.checked){
+        const extraName = extra.getAttribute('data-name') || 'إضافة';
+        const extraPrice = parseInt(extra.getAttribute('data-price') || '0');
+        price += extraPrice;
+        name += ` + ${extraName}`;
+      }
+    });
 
     cart.push({ item: name, price: price, qty: 1 });
     saveCart();
@@ -77,6 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // إرسال الطلب على WhatsApp
   orderForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const name = orderForm.name.value.trim();
@@ -106,6 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // تحميل أي طلبات سابقة عند فتح الصفحة
   renderCart();
 });
+
 
 
 
