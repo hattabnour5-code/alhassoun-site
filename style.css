@@ -15,7 +15,11 @@ body {
   font-family: "Segoe UI", Tahoma, Arial, sans-serif;
   text-align:center;
   padding:18px;
-  padding-top: 100px; /* space for fixed header */
+  padding-top: 100px;
+  position: fixed;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
 }
 
 /* HEADER */
@@ -111,16 +115,29 @@ body {
 }
 
 /* MODAL */
-.modal{
-  position:fixed;
-  inset:0;
-  display:none;
-  align-items:center;
-  justify-content:center;
-  background:rgba(0,0,0,0.7);
-  padding:18px;
-  z-index:70;
+#orderModal {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: auto;
 }
+
+#orderModal .modal-content {
+  width: 90%;
+  max-width: 380px;
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
 .modal[aria-hidden="false"]{display:flex;}
 
 .modal-card{
@@ -254,3 +271,4 @@ label{
 #quickWhatsApp {
   display: none !important;
 }
+
