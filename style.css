@@ -6,7 +6,7 @@
   --radius:14px;
 }
 
-/* BASE */
+
 body {
   margin:0;
   min-height:100vh;
@@ -22,7 +22,6 @@ body {
   height: 100%;
 }
 
-/* HEADER */
 .site-header {
   display: flex;
   justify-content: flex-start;
@@ -53,7 +52,6 @@ body {
   color: rgb(255, 249, 242);
 }
 
-/* HOME PAGE GRID */
 .menu-sections{
   display:grid;
   gap:16px;
@@ -91,14 +89,12 @@ body {
   color:#fff;
 }
 
-/* Large screens - 3 columns */
 @media(min-width:1024px){
   .menu-sections{
     grid-template-columns:repeat(3,1fr);
   }
 }
 
-/* WhatsApp floating button */
 .fab-whatsapp{
   position:fixed;
   bottom:18px;
@@ -114,41 +110,17 @@ body {
   box-shadow:0 6px 18px rgba(0,0,0,0.3);
 }
 
-/* MODAL */
-#orderModal {
-  position: fixed !important;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0,0,0,0.6);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  pointer-events: auto;
-}
-
-#orderModal .modal-content {
-  width: 90%;
-  max-width: 380px;
-  background: white;
-  border-radius: 12px;
-  padding: 20px;
-  max-height: 80vh;
-  overflow-y: auto;
-}
-
 .modal {
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.6);
-  display: none !important;   /* مخباية بشكل كامل */
+  display: none !important;  
   justify-content: center;
   align-items: center;
   z-index: 9999;
 }
 
-/* لما ينعمل aria-hidden = false بتبين */
+
 .modal[aria-hidden="false"] {
   display: flex !important;
 }
@@ -205,10 +177,6 @@ label{
   cursor:pointer;
 }
 
-/* ------------------------------ */
-/*     UNIFIED CARD DESIGN        */
-/*     FOR ALL MENU PAGES         */
-/* ------------------------------ */
 
 .menu-track {
   display: grid;
@@ -217,14 +185,12 @@ label{
   padding: 10px;
 }
 
-/* Large screens: 3 cards */
 @media (min-width: 700px) {
   .menu-track {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-/* Card Design (same as Home Page) */
 .menu .card {
   background:var(--bg);
   border-radius:20px;
@@ -257,7 +223,6 @@ label{
   font-size:16px;
 }
 
-/* زر الاضافة – نفس تصميم المناقيش */
 .add-to-cart,
 .zaatar-btn,
 .size-btn {
@@ -283,5 +248,6 @@ label{
 #quickWhatsApp {
   display: none !important;
 }
+
 
 
