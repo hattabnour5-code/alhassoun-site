@@ -94,7 +94,7 @@ body {
   }
 }
 
-/* FIXED WHATSAPP BUTTON (HIDDEN NOW) */
+/* FIXED WHATSAPP BUTTON */
 .fab-whatsapp{
   position:fixed;
   bottom:18px;
@@ -110,7 +110,7 @@ body {
   box-shadow:0 6px 18px rgba(0,0,0,0.3);
 }
 
-/* HIDE WHATSAPP BUTTON (WE NO LONGER USE IT) */
+/* HIDE WHATSAPP BUTTON */
 #quickWhatsApp {
   display: none !important;
 }
@@ -186,11 +186,11 @@ body {
   background: #1ebe5b;
 }
 
-/* MODAL (FIXED + CLEAN + WHITE) */
+/* MODAL */
 .modal {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0,0,0,0.85); /* خلفية سوداء داكنة */
   display: none !important;
   justify-content: center;
   align-items: center;
@@ -202,13 +202,14 @@ body {
 }
 
 .modal-card {
-  background: #fff;
+  background: #0b0b0c; /* نفس لون الخلفية الداكنة */
   padding: 20px;
   width: 90%;
   max-width: 400px;
   border-radius: 12px;
   position: relative;
-  color: #000;
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.5);
 }
 
 /* CLOSE BUTTON */
@@ -218,7 +219,7 @@ body {
   top:10px;
   background:none;
   border:0;
-  color:#000;
+  color:#fff;
   font-size:26px;
   cursor:pointer;
 }
@@ -229,9 +230,9 @@ input, textarea{
   width:100%;
   padding:10px;
   border-radius:8px;
-  border:1px solid #ccc;
-  background:#fff;
-  color:#000;
+  border:1px solid #fff; /* خطوط بيضاء */
+  background:#0b0b0c; /* خلفية سوداء */
+  color:#fff; /* نص أبيض */
 }
 
 label{
@@ -240,7 +241,7 @@ label{
   margin:8px 0;
 }
 
-/* ACTION BUTTONS INSIDE MODAL */
+/* ACTION BUTTONS */
 .actions{
   display:flex;
   gap:10px;
@@ -256,6 +257,7 @@ label{
   border-radius:8px;
   cursor:pointer;
 }
+
 
 
 
