@@ -113,7 +113,7 @@ body {
 .modal {
   position: fixed;
   inset: 0;
-  background: var(--bg);
+  background: rgba(0,0,0,0.6);
   display: none !important;  
   justify-content: center;
   align-items: center;
