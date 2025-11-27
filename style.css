@@ -225,9 +225,9 @@ input, textarea{
   width:100%;
   padding:10px;
   border-radius:8px;
-  border:1px solid #fff; /
+  border:1px solid #0000; /
   background:#0b0b0c;
-  color:#fff;
+  color:#0000;
 }
 
 label{
@@ -251,6 +251,7 @@ label{
   border-radius:8px;
   cursor:pointer;
 }
+
 
 
 
